@@ -11,7 +11,7 @@
     <Button
         android:id="@+id/btn_1"
         android:layout_width="270px"
-        android:layout_height="wrap_content"
+        android:layout_height="110px"
         android:text="Home"
         android:textSize="12sp"
         app:cornerRadius="5dp"
@@ -21,7 +21,7 @@
     <Button
         android:id="@+id/btn_2"
         android:layout_width="270px"
-        android:layout_height="wrap_content"
+        android:layout_height="110px"
         android:text="Schedule"
         android:textSize="12sp"
         app:cornerRadius="5dp"
@@ -31,7 +31,7 @@
     <Button
         android:id="@+id/btn_3"
         android:layout_width="270px"
-        android:layout_height="wrap_content"
+        android:layout_height="110px"
         android:text="Message"
         android:textSize="12sp"
         app:cornerRadius="5dp"
@@ -41,7 +41,7 @@
     <Button
         android:id="@+id/btn_4"
         android:layout_width="270px"
-        android:layout_height="wrap_content"
+        android:layout_height="110px"
         android:text="Settings"
         android:textSize="12sp"
         app:cornerRadius="5dp"
