@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         val btn1 = findViewById<Button>(R.id.btn_1)
         val btn2 : Button = findViewById(R.id.btn_2)
         val btn3 : Button = findViewById(R.id.btn_3)
-        val btn4 : Button = findViewById(R.id.btn_4)
 
 //        buat event
 //        1. event btn1
