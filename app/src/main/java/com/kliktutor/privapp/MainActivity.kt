@@ -37,11 +37,6 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity,"Tombol 3",Toast.LENGTH_SHORT).show()
         }
 
-//        4. event btn4
-        btn4.setOnClickListener {
-            Toast.makeText(this@MainActivity,"Tombol 4",Toast.LENGTH_SHORT).show()
-        }
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
