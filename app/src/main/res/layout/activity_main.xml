@@ -13,35 +13,40 @@
         android:layout_width="270px"
         android:layout_height="wrap_content"
         android:text="Home"
+        android:textSize="12sp"
         app:cornerRadius="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="478dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_2"
         android:layout_width="270px"
         android:layout_height="wrap_content"
         android:text="Schedule"
+        android:textSize="12sp"
         app:cornerRadius="5dp"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="384dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/btn_1"
+        app:layout_constraintStart_toEndOf="@+id/btn_1" />
 
     <Button
         android:id="@+id/btn_3"
         android:layout_width="270px"
         android:layout_height="wrap_content"
         android:text="Message"
+        android:textSize="12sp"
         app:cornerRadius="5dp"
-        tools:layout_editor_absoluteX="253dp"
-        tools:layout_editor_absoluteY="374dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/btn_2"
+        app:layout_constraintStart_toEndOf="@+id/btn_2" />
 
     <Button
         android:id="@+id/btn_4"
         android:layout_width="270px"
         android:layout_height="wrap_content"
         android:text="Settings"
+        android:textSize="12sp"
         app:cornerRadius="5dp"
-        tools:layout_editor_absoluteX="292dp"
-        tools:layout_editor_absoluteY="228dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/btn_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
