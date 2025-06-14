@@ -10,8 +10,9 @@
 
     <Button
         android:id="@+id/btn_1"
-        android:layout_width="270px"
-        android:layout_height="110px"
+        android:layout_width="147dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="2dp"
         android:text="Home"
         android:textSize="12sp"
         app:cornerRadius="5dp"
@@ -20,8 +21,9 @@
 
     <Button
         android:id="@+id/btn_2"
-        android:layout_width="270px"
-        android:layout_height="110px"
+        android:layout_width="147dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="2dp"
         android:text="Schedule"
         android:textSize="12sp"
         app:cornerRadius="5dp"
@@ -30,23 +32,13 @@
 
     <Button
         android:id="@+id/btn_3"
-        android:layout_width="270px"
-        android:layout_height="110px"
+        android:layout_width="147dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="2dp"
         android:text="Message"
         android:textSize="12sp"
         app:cornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_2"
         app:layout_constraintStart_toEndOf="@+id/btn_2" />
-
-    <Button
-        android:id="@+id/btn_4"
-        android:layout_width="270px"
-        android:layout_height="110px"
-        android:text="Settings"
-        android:textSize="12sp"
-        app:cornerRadius="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
