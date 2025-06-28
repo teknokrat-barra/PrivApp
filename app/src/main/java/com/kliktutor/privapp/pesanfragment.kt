@@ -55,6 +55,14 @@ class pesanfragment : Fragment() {
         tv.setTextColor(resources.getColor(android.R.color.white, null))
         tv.textSize = 16f
 
+        tv.setOnClickListener {
+            val chatFragment = chatfragment.newInstance(namaTutor)
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, chatFragment)
+                .addToBackStack(null)
+                .commit()
+        }
+
         layoutPesan.addView(tv)
     }
 
