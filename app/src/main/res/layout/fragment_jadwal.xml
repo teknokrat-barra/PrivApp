@@ -1,30 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_jadwal_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp">
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Tampilan kosong -->
+    <LinearLayout
+        android:id="@+id/layout_kosong"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Jadwal Les"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Silakan login untuk melihat jadwal belajar Anda"
-        android:textSize="16sp"
-        android:layout_marginBottom="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kamu belum memiliki jadwal"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
 
+    <!-- Container jadwal -->
+    <ScrollView
+        android:id="@+id/layout_jadwal_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/layout_jadwal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- Tombol tambah -->
     <Button
-        android:id="@+id/btn_login_jadwal"
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_tambah_jadwal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_blue_dark"
-        android:text="Login Sekarang" />
+        android:text="Masukkan Jadwal Baru" />
 </LinearLayout>
