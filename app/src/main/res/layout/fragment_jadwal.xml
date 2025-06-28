@@ -6,6 +6,21 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+
+    <!-- Judul Jadwal -->
+    <TextView
+        android:id="@+id/judul_jadwal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Jadwal"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:paddingBottom="12dp"
+        android:paddingTop="4dp"
+        android:visibility="visible" />
+
     <!-- Tampilan kosong -->
     <LinearLayout
         android:id="@+id/layout_kosong"
@@ -36,20 +51,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <!-- Judul Jadwal -->
-            <TextView
-                android:id="@+id/judul_jadwal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="Jadwal"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:paddingBottom="12dp"
-                android:paddingTop="4dp"
-                android:visibility="gone" />
 
             <!-- Ini untuk daftar item jadwal -->
             <LinearLayout
