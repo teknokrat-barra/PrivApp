@@ -33,16 +33,44 @@
         android:visibility="gone">
 
         <LinearLayout
-            android:id="@+id/layout_jadwal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical">
+
+            <!-- Judul Jadwal -->
+            <TextView
+                android:id="@+id/judul_jadwal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Jadwal"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:paddingBottom="12dp"
+                android:paddingTop="4dp"
+                android:visibility="gone" />
+
+            <!-- Ini untuk daftar item jadwal -->
+            <LinearLayout
+                android:id="@+id/layout_jadwal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
     </ScrollView>
 
     <!-- Tombol tambah -->
     <Button
         android:id="@+id/btn_tambah_jadwal"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Masukkan Jadwal Baru" />
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="Masukkan Jadwal Baru"
+        android:textSize="14sp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" />
 </LinearLayout>

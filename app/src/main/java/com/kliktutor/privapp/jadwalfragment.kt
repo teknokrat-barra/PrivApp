@@ -84,14 +84,34 @@ class jadwalfragment : Fragment() {
     }
 
     private fun tampilkanJadwal(text: String) {
+        val container = LinearLayout(requireContext())
+        container.orientation = LinearLayout.HORIZONTAL
+        container.setPadding(8, 8, 8, 8)
+
         val textView = TextView(requireContext())
         textView.text = text
-        textView.setPadding(16, 16, 16, 16)
+        textView.layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
         textView.setBackgroundResource(android.R.color.darker_gray)
         textView.setTextColor(resources.getColor(android.R.color.white, null))
+        textView.setPadding(16, 16, 16, 16)
         textView.textSize = 16f
 
-        layoutJadwal.addView(textView)
+        val btnHapus = Button(requireContext())
+        btnHapus.text = "X"
+        btnHapus.setOnClickListener {
+            layoutJadwal.removeView(container)
+            hapusJadwal(text)
+
+            if (layoutJadwal.childCount == 0) {
+                layoutKosong.visibility = View.VISIBLE
+                layoutJadwalContainer.visibility = View.GONE
+            }
+        }
+
+        container.addView(textView)
+        container.addView(btnHapus)
+
+        layoutJadwal.addView(container)
 
         layoutKosong.visibility = View.GONE
         layoutJadwalContainer.visibility = View.VISIBLE
@@ -100,6 +120,12 @@ class jadwalfragment : Fragment() {
     private fun saveJadwal(newItem: String) {
         val existing = sharedPreferences.getStringSet("jadwal_list", mutableSetOf())!!.toMutableSet()
         existing.add(newItem)
+        sharedPreferences.edit().putStringSet("jadwal_list", existing).apply()
+    }
+
+    private fun hapusJadwal(item: String) {
+        val existing = sharedPreferences.getStringSet("jadwal_list", mutableSetOf())!!.toMutableSet()
+        existing.remove(item)
         sharedPreferences.edit().putStringSet("jadwal_list", existing).apply()
     }
 
