@@ -19,21 +19,19 @@
         android:layout_marginBottom="32dp" />
 
     <TextView
-        android:id="@+id/text_nama_akun"
+        android:id="@+id/tv_nama_akun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nama Pengguna"
-        android:textSize="18sp"
-        android:textColor="@android:color/black"
-        android:layout_marginBottom="40dp" />
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
 
     <Button
-        android:id="@+id/btn_logout_akun"
+        android:id="@+id/btn_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Logout"
-        android:textColor="@android:color/white"
-        android:backgroundTint="@android:color/holo_red_light"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp" />
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:textColor="@android:color/white" />
 </LinearLayout>
