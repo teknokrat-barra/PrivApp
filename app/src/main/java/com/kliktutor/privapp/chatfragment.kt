@@ -11,6 +11,7 @@ class chatfragment : Fragment() {
     private lateinit var layoutChat: LinearLayout
     private lateinit var editPesan: EditText
     private lateinit var scrollView: ScrollView
+    private lateinit var btnBack: ImageButton
     private var namaTutor: String? = null
 
     companion object {
@@ -31,16 +32,21 @@ class chatfragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_chat, container, false)
 
+        // Ambil argument tutor
         namaTutor = arguments?.getString(ARG_TUTOR)
 
+        // Inisialisasi view
         namaTutorView = view.findViewById(R.id.nama_tutor_chat)
         layoutChat = view.findViewById(R.id.layout_chat)
         editPesan = view.findViewById(R.id.edit_pesan)
         scrollView = view.findViewById(R.id.scroll_pesan)
-        val btnKirim = view.findViewById<Button>(R.id.btn_kirim)
+        btnBack = view.findViewById(R.id.btn_back)
 
+        // Tampilkan nama tutor
         namaTutorView.text = namaTutor
 
+        // Tombol kirim
+        val btnKirim = view.findViewById<Button>(R.id.btn_kirim)
         btnKirim.setOnClickListener {
             val pesan = editPesan.text.toString()
             if (pesan.isNotEmpty()) {
@@ -48,6 +54,11 @@ class chatfragment : Fragment() {
                 editPesan.text.clear()
                 scrollView.post { scrollView.fullScroll(View.FOCUS_DOWN) }
             }
+        }
+
+        // Tombol kembali ke daftar chat
+        btnBack.setOnClickListener {
+            parentFragmentManager.popBackStack()
         }
 
         return view
