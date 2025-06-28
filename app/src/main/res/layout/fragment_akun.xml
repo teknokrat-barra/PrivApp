@@ -1,30 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_akun_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp">
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="@android:color/white">
 
     <TextView
+        android:id="@+id/judul_akun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Akun Saya"
-        android:textSize="20sp"
+        android:text="Akun"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="32dp" />
 
     <TextView
+        android:id="@+id/text_nama_akun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Anda belum login."
-        android:textSize="16sp"
-        android:layout_marginBottom="24dp" />
+        android:text="Nama Pengguna"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="40dp" />
 
     <Button
-        android:id="@+id/btn_login_akun"
+        android:id="@+id/btn_logout_akun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_blue_dark"
-        android:text="Login untuk Melanjutkan" />
+        android:text="Logout"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp" />
 </LinearLayout>
